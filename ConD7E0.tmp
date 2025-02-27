@@ -1,0 +1,161 @@
+[gd_scene load_steps=12 format=3 uid="uid://pq01l4f4blgj"]
+
+[ext_resource type="Script" path="res://link_button.gd" id="1_b35ou"]
+[ext_resource type="FontFile" uid="uid://1pkpikrd8ms6" path="res://Atkinson_Hyperlegible_Mono/AtkinsonHyperlegibleMono-VariableFont_wght.ttf" id="1_mmb0m"]
+[ext_resource type="Texture2D" uid="uid://h06dk4c64akt" path="res://fesf.png" id="2_o8j7w"]
+[ext_resource type="Script" path="res://teste link.gd" id="2_sm001"]
+[ext_resource type="Script" path="res://acessarconfig.gd" id="3_ry06b"]
+[ext_resource type="Texture2D" uid="uid://dqdgjncc66y6x" path="res://circulo de progresso.png" id="4_l2c7b"]
+[ext_resource type="Texture2D" uid="uid://rqj77dt8rfpj" path="res://botsaaaaa (1).png" id="5_6r6yy"]
+[ext_resource type="Script" path="res://jogar.gd" id="6_db36c"]
+[ext_resource type="Texture2D" uid="uid://dcvtu2toe0s36" path="res://feesf.png" id="7_2s543"]
+[ext_resource type="Script" path="res://sair.gd" id="8_e4752"]
+
+[sub_resource type="Theme" id="Theme_sp1jm"]
+default_font_size = 0
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = 7.0
+offset_right = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.310216, 0.371457, 0.591671, 1)
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.365
+anchor_top = 0.877
+anchor_right = 0.591
+anchor_bottom = 0.938
+offset_left = 0.519989
+offset_top = -0.296021
+offset_right = -167.832
+offset_bottom = 0.175964
+
+[node name="Label" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+text = "feito por "
+
+[node name="LinkButton" type="LinkButton" parent="HBoxContainer2"]
+modulate = Color(0.252237, 0.172958, 1, 1)
+self_modulate = Color(0.691357, 0.691357, 0.691357, 1)
+layout_mode = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+theme = SubResource("Theme_sp1jm")
+theme_override_font_sizes/font_size = 20
+button_mask = 0
+text = "Games Engine"
+uri = "https://github.com/shadow-GHS-157-Menino-Maluquinho"
+structured_text_bidi_override = 1
+script = ExtResource("1_b35ou")
+
+[node name="Button" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+script = ExtResource("2_sm001")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48
+anchor_top = 0.19
+anchor_right = 0.48
+anchor_bottom = 0.19
+offset_left = -154.96
+offset_top = -46.12
+offset_right = -83.96
+offset_bottom = -23.12
+theme_override_fonts/font = ExtResource("1_mmb0m")
+theme_override_font_sizes/font_size = 70
+text = "GAME AR"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+z_index = 5
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.465
+anchor_top = 0.558
+anchor_right = 0.465
+anchor_bottom = 0.558
+offset_left = -325.68
+offset_top = -151.584
+offset_right = 374.32
+offset_bottom = 156.416
+theme_override_constants/separation = 40
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("2_o8j7w")
+flat = true
+script = ExtResource("3_ry06b")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/Button2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.497
+anchor_right = 0.5
+anchor_bottom = 0.497
+offset_left = -151.5
+offset_top = -150.076
+offset_right = 148.5
+offset_bottom = 149.924
+fill_mode = 4
+texture_progress = ExtResource("4_l2c7b")
+tint_progress = Color(0.380392, 0.894118, 0, 1)
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("5_6r6yy")
+flat = true
+script = ExtResource("6_db36c")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.497
+anchor_right = 0.5
+anchor_bottom = 0.497
+offset_left = -151.5
+offset_top = -150.076
+offset_right = 148.5
+offset_bottom = 149.924
+fill_mode = 4
+texture_progress = ExtResource("4_l2c7b")
+tint_progress = Color(0.380392, 0.894118, 0, 1)
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("7_2s543")
+flat = true
+script = ExtResource("8_e4752")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/Button3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.497
+anchor_right = 0.5
+anchor_bottom = 0.497
+offset_left = -151.5
+offset_top = -150.076
+offset_right = 148.5
+offset_bottom = 149.924
+fill_mode = 4
+texture_progress = ExtResource("4_l2c7b")
+tint_progress = Color(0.380392, 0.894118, 0, 1)
