@@ -1,7 +1,7 @@
 extends Button
 
 # The URL to open when the button is clicked
-var url = "https://github.com/shadow-GHS-157-Menino-Maluquinho"
+var url = "https://astrareachvr.web.app/"
 
 # Use _ready() function to connect the signal
 func _ready():

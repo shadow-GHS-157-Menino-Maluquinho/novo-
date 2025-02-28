@@ -1,14 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://pq01l4f4blgj"]
+[gd_scene load_steps=11 format=3 uid="uid://dyo5c2sfx8fd"]
 
-[ext_resource type="FontFile" uid="uid://1pkpikrd8ms6" path="res://Atkinson_Hyperlegible_Mono/AtkinsonHyperlegibleMono-VariableFont_wght.ttf" id="1_mmb0m"]
-[ext_resource type="Script" path="res://button.gd" id="1_ucvwn"]
-[ext_resource type="Texture2D" uid="uid://h06dk4c64akt" path="res://fesf.png" id="2_o8j7w"]
-[ext_resource type="Script" path="res://acessarconfig.gd" id="3_ry06b"]
-[ext_resource type="Texture2D" uid="uid://dqdgjncc66y6x" path="res://circulo de progresso.png" id="4_l2c7b"]
-[ext_resource type="Texture2D" uid="uid://rqj77dt8rfpj" path="res://botsaaaaa (1).png" id="5_6r6yy"]
-[ext_resource type="Script" path="res://jogar.gd" id="6_db36c"]
-[ext_resource type="Texture2D" uid="uid://dcvtu2toe0s36" path="res://feesf.png" id="7_2s543"]
-[ext_resource type="Script" path="res://sair.gd" id="8_e4752"]
+[ext_resource type="Script" path="res://controller_2.gd" id="1_ek5bd"]
+[ext_resource type="FontFile" uid="uid://1pkpikrd8ms6" path="res://Atkinson_Hyperlegible_Mono/AtkinsonHyperlegibleMono-VariableFont_wght.ttf" id="1_et55g"]
+[ext_resource type="Script" path="res://button.gd" id="2_qqnkk"]
+[ext_resource type="Texture2D" uid="uid://h06dk4c64akt" path="res://fesf.png" id="3_hkr3t"]
+[ext_resource type="Script" path="res://acessarconfig.gd" id="4_3wakv"]
+[ext_resource type="Texture2D" uid="uid://dqdgjncc66y6x" path="res://circulo de progresso.png" id="5_x5bvi"]
+[ext_resource type="Texture2D" uid="uid://rqj77dt8rfpj" path="res://botsaaaaa (1).png" id="6_u1p5m"]
+[ext_resource type="Script" path="res://jogar.gd" id="7_0u5fw"]
+[ext_resource type="Texture2D" uid="uid://dcvtu2toe0s36" path="res://feesf.png" id="8_w0wro"]
+[ext_resource type="Script" path="res://sair.gd" id="9_ssvlj"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -17,6 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ek5bd")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -45,14 +47,14 @@ offset_bottom = 0.175964
 [node name="Label" type="Label" parent="HBoxContainer2"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_mmb0m")
+theme_override_fonts/font = ExtResource("1_et55g")
 theme_override_font_sizes/font_size = 21
 text = "feito por "
 
 [node name="Button" type="Button" parent="HBoxContainer2"]
 layout_mode = 2
 text = "Games Engeni"
-script = ExtResource("1_ucvwn")
+script = ExtResource("2_qqnkk")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -65,7 +67,7 @@ offset_left = -154.96
 offset_top = -46.12
 offset_right = -83.96
 offset_bottom = -23.12
-theme_override_fonts/font = ExtResource("1_mmb0m")
+theme_override_fonts/font = ExtResource("1_et55g")
 theme_override_font_sizes/font_size = 70
 text = "GAME VR"
 
@@ -85,9 +87,9 @@ theme_override_constants/separation = 40
 
 [node name="Button2" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-icon = ExtResource("2_o8j7w")
+icon = ExtResource("3_hkr3t")
 flat = true
-script = ExtResource("3_ry06b")
+script = ExtResource("4_3wakv")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/Button2"]
 layout_mode = 1
@@ -101,14 +103,14 @@ offset_top = -150.076
 offset_right = 148.5
 offset_bottom = 149.924
 fill_mode = 4
-texture_progress = ExtResource("4_l2c7b")
+texture_progress = ExtResource("5_x5bvi")
 tint_progress = Color(0.380392, 0.894118, 0, 1)
 
 [node name="Button" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-icon = ExtResource("5_6r6yy")
+icon = ExtResource("6_u1p5m")
 flat = true
-script = ExtResource("6_db36c")
+script = ExtResource("7_0u5fw")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/Button"]
 layout_mode = 1
@@ -122,14 +124,14 @@ offset_top = -150.076
 offset_right = 148.5
 offset_bottom = 149.924
 fill_mode = 4
-texture_progress = ExtResource("4_l2c7b")
+texture_progress = ExtResource("5_x5bvi")
 tint_progress = Color(0.380392, 0.894118, 0, 1)
 
 [node name="Button3" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-icon = ExtResource("7_2s543")
+icon = ExtResource("8_w0wro")
 flat = true
-script = ExtResource("8_e4752")
+script = ExtResource("9_ssvlj")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="HBoxContainer/Button3"]
 layout_mode = 1
@@ -143,5 +145,20 @@ offset_top = -150.076
 offset_right = 148.5
 offset_bottom = 149.924
 fill_mode = 4
-texture_progress = ExtResource("4_l2c7b")
+texture_progress = ExtResource("5_x5bvi")
+tint_progress = Color(0.380392, 0.894118, 0, 1)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.032
+anchor_top = 0.715
+anchor_right = 0.094
+anchor_bottom = 0.906
+offset_left = -58.864
+offset_top = -126.32
+offset_right = 169.712
+offset_bottom = 49.912
+fill_mode = 4
+texture_progress = ExtResource("5_x5bvi")
 tint_progress = Color(0.380392, 0.894118, 0, 1)
